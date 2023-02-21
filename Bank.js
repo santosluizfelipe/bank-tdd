@@ -8,12 +8,12 @@ class Bank {
 
   deposit(value){
     this.currentCredit = this.currentCredit + value;
-    this.balance.push( this.currentDate.getCurrentDate() + " || " + this.currentCredit)
+    this.balance.push( `${this.currentDate.getCurrentDate()} || ${this.currentCredit} \n`)
   }
 
   withdrawal(value){
     this.currentCredit = this.currentCredit - value + 0.0;
-    this.balance.push( this.currentDate.getCurrentDate() + " || " + this.currentCredit)
+    this.balance.push( `${this.currentDate.getCurrentDate()} || ${this.currentCredit} \n`)
   }
   statement(){
     return this.balance;

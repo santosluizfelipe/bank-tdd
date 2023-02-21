@@ -21,3 +21,6 @@ I decide to structure my approach in this way so the responsabilite of my classe
   %  touch GetDate.js
 
   %  touch GetDate.test.js
+
+  ![example of my output](node-screenshot.png)
+
