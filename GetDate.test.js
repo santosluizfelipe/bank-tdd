@@ -10,4 +10,8 @@ describe("bank class", () => {
 
     global.Date.mockRestore();
   })
+
+  it("should throw an error if an invalid date is passed to the NewDate constructor", () => {
+    expect(() => new NewDate("invalid date")).toThrowError("Invalid date");
+  });
 });
