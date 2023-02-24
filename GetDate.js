@@ -3,14 +3,18 @@ class GetDate{
     const today = new Date(dateString);
     if (isNaN(today)) {
       throw new Error("Invalid date");
+    }else if(today.getMonth() + 1 > 12 || today.getDate()  > 31 || today.getFullYear().length < 4 ) {
+      throw new Error("Invalid date");
+    }else{
+      this.today = today;
     }
-    this.today = today;
   }
   getCurrentDate() {
-    const date = this.today.getDate();
+    const day = this.today.getDate();
     const month = this.today.getMonth() + 1;
     const year = this.today.getFullYear();
-    return `${date < 10 ? "0" + date : date}/${month < 10 ? "0" + month : month}/${year}`;
+    let currentDate = `${day < 10 ? "0" + day : day}/${month < 10 ? "0" + month : month}/${year}`;
+    return currentDate;
   }
 }
 
