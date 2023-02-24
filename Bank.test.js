@@ -1,7 +1,13 @@
 const Bank = require('./Bank')
-const NewDate = require('./GetDate')
+
 
 describe("bank class", () => {
+
+  beforeEach(() => {
+    const mockDate = new Date('2023-02-21T00:00:00.000Z');
+    jest.spyOn(global, 'Date').mockImplementation(() => mockDate);
+  });
+
   it("The class initiates w/ an empty array", () => {
     const bank = new Bank()
     
